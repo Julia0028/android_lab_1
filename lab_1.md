@@ -30,7 +30,7 @@
 
 *Рис 1.4 Макет экрана 2. Вариант 5*
 
-![image_5](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/5.png)
+![image_5_1](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/5_1.png)
 
 - LinearLayout - макет, который выравнивает всех дочерних элементов в одном направлении: горизонтально или вертикально. Все дочерние элементы LinearLayout располагаются один за другим, поэтому в вертикальном списке будет только один дочерний элемент на строку, независимо от того, насколько они широки, а горизонтальный список будет иметь высоту только в одну строку (высота самого высокого дочернего элемента плюс внутренний отступ). LinearLayout учитывает внешние отступы между дочерними элементами и выравнивание по правому краю, центру или левому краю каждого дочернего элемента.
 - Layout_weight - атрибут, который назначает вес дочерним отдельным элементам, тем самым определяет их "важность" в контексте пространства. Элементы будут заполнять экран в пропорциях от объявленного веса. 
@@ -61,7 +61,7 @@
 
 *Рис 2.2 Макет экрана 2. Вариант 5*
 
-![image_7](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/7.png)
+![image_7_1_1](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/7_1_1.png)
 
 - ConstraintLayout - контейнер, который позволяет гибко размещать и изменять размер виджетов. ConstraintLayout позволяет создавать большие и сложные макеты с плоской иерархией представлений. Чтобы определить позицию элемента, нужно задать, как
 минимум, одно ограничение для каждой оси. 
@@ -208,7 +208,6 @@
         android:id="@+id/textView"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         android:text="TextView" />
 
     <Button
@@ -222,7 +221,6 @@
         android:id="@+id/imageView"
         android:layout_width="50dp"
         android:layout_height="match_parent"
-        android:layout_weight="1"
         tools:srcCompat="@tools:sample/avatars" />
 </LinearLayout>
 ```
@@ -296,12 +294,10 @@
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="160dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -310,8 +306,9 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="362dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
@@ -320,23 +317,10 @@
         android:layout_height="0dp"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline16"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="160dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline17"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="160dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="362dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
