@@ -71,7 +71,10 @@
 ##### Задача 3. ConstraintLayout
 ---
 **Задание:** создайть layout ресурс для следующего макета экрана с использованием ConstraintLayout.
+
 *Рис 3.1 Макет экрана. Вариант 18*
+
+![image_9](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/9.png)
 
 **Решение:** 
 
