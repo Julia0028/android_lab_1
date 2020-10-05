@@ -12,10 +12,13 @@
 ##### Задача 1. LinearLayout
 ---
 **Задание**: создать layout ресурсы для следующих макетов экрана с использованием LinearLayout.
+
 *Рис 1.1 Макет экрана 1. Вариант 18*
+
 ![image](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/1.png)
 
 *Рис 1.2 Макет экрана 2. Вариант 5*
+
 ![image_2](https://github.com/Julia0028/android_lab_1/blob/master/report_lab_1/2.png)
 
 **Решение:**
